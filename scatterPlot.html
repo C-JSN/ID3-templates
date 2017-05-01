@@ -9,7 +9,7 @@
 <body>
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script id="mainScript">
-    let scatter = {
+    var scatter = {
       margin: {
         top: 30,
         right: 30,
@@ -609,8 +609,8 @@
       scatter.data = create_data(xArray, yArray);
     }
 
-    let svg = createSvg(scatter);
-    let plot = createScatterPlot(svg, scatter);
+    var svg = createSvg(scatter);
+    var plot = createScatterPlot(svg, scatter);
     createAxis(svg, scatter, plot);
     createGridLines(svg, scatter);
     checkRegressionLine(svg, scatter, plot);
