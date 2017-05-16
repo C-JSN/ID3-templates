@@ -410,6 +410,7 @@
 
     function checkRegressionLine(svg, settings, plot) {
       if (settings.regressionLine.exist) {
+        svg.select(".regressionLine").remove();
         const yhat = regress(settings.data);
         settings.data.forEach((obj, i) => {
           obj.yhat = yhat[i];
